@@ -1,25 +1,6 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
-# system "say hi mom, look no console"
-# require 'faker'
-
-# 150.times do 
-#   first_name = Faker::Name.first_name
-#   last_name = Faker::Name.last_name
-
-#   contact = Contact.new(
-#                         first_name: first_name,
-#                         last_name: last_name,
-#                         email: Faker::Internet.free_email("#{first_name}.#{last_name}"),
-#                         phone_number: Faker::PhoneNumber.phone_number
-#                         )
-#   contact.save
-# end
-Contact.create({first_name: "Doc", last_name: "Brown", email: "1.21Gigawatts@gmail.com", phone_number: "1234567890"})
-Contact.create({first_name: "Egon", last_name: "Spengler", email: "gianttwinkee@gmail.com", phone_number: "1223456789"})
-Contact.create({first_name: "Adrian", last_name: "Monk", email: "wipewipewipe@gmail.com", phone_number: "1233456789"})
+Contact.create!([
+  {first_name: "Bob", last_name: "Rooooooarman", email: "carguy@yahoo.com", phone_number: "3036780055", middle_name: nil, bio: nil},
+  {first_name: "Doc", last_name: "Brown", email: "1.21Gigawatts@gmail.com", phone_number: "1234567890", middle_name: nil, bio: nil},
+  {first_name: "Egon", last_name: "Spengler", email: "gianttwinkee@gmail.com", phone_number: "1223456789", middle_name: nil, bio: nil},
+  {first_name: "Adrian", last_name: "Monk", email: "wipewipewipe@gmail.com", phone_number: "1233456789", middle_name: nil, bio: nil}
+])

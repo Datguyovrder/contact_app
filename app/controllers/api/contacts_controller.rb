@@ -1,5 +1,8 @@
 class Api::ContactsController < ApplicationController
   def index
+    puts "********************"
+    p current_user
+    puts "********************"
     @contacts = Contact.all
     render 'index.json.jbuilder'
   end
@@ -10,7 +13,8 @@ class Api::ContactsController < ApplicationController
                            middle_name: params[:middle_name],
                            email: params[:email],
                            phone_number: params[:phone_number],
-                           bio: params[:bio]
+                           bio: params[:bio],
+                           user_id: current_user.id
                           )
     @contact.save
     render 'show.json.jbuilder'

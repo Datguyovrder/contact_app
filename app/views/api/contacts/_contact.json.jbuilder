@@ -13,4 +13,6 @@ json.formatted do
   json.japanese_number contact.japan_phone_number
 end
 
-json.current_user current_user
+json.groups do
+  json.array! contact.groups, partial: "api/groups/group", as: :group
+end

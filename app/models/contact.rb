@@ -6,7 +6,9 @@ class Contact < ApplicationRecord
   validates :bio, presence: true
 
   belongs_to :user
-
+  has_many :contact_groups
+  has_many :contacts, through: :contact_groups
+  
   def friendly_updated_at
     updated_at.strftime("%b %d, %Y")
   end

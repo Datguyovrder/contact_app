@@ -5,7 +5,7 @@ class Api::ContactsController < ApplicationController
       group_name = params[:group]
       if group_name
         group = Group.find_by(name: group_name)
-        @contacts = group.contact
+        @contacts = group.contacts.where(user_id: current_user.id)
       end
 
       render 'index.json.jbuilder'
